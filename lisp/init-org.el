@@ -69,7 +69,7 @@ typical word processor."
       (progn
         (when (fboundp 'writeroom-mode)
           (writeroom-mode 1))
-        (setq truncate-lines nil)
+        (setq truncate-lines 1)
         (setq word-wrap t)
         (setq cursor-type 'bar)
         (when (eq major-mode 'org)
