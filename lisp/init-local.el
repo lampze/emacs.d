@@ -15,5 +15,34 @@
 
 
 
+(defun shirui/set-normal-chinese-font ()
+  "Set chinese' font be normal."
+  (interactive)
+  (dolist (charset '(kana han symbol cjk-misc bopomofo))
+    (set-fontset-font
+     (frame-parameter nil 'font)
+     charset
+     (font-spec :name "-WQYF-WenQuanYi Micro Hei Mono-normal-normal-normal-*-*-*-*-*-*-0-iso10646-1"
+                :weight 'normal
+                :slant 'normal
+                :size 16.0))))
+
+(defun shirui/set-big-chinese-font ()
+  "Set chinese' font be big."
+  (interactive)
+  (dolist (charset '(kana han symbol cjk-misc bopomofo))
+    (set-fontset-font
+     (frame-parameter nil 'font)
+     charset
+     (font-spec :name "-WQYF-WenQuanYi Micro Hei Mono-normal-normal-normal-*-*-*-*-*-*-0-iso10646-1"
+                :weight 'normal
+                :slant 'normal
+                :size 19.5))))
+
+(global-set-key (kbd "C-c C-n") 'shirui/set-normal-chinese-font)
+(global-set-key (kbd "C-c C-S-n") 'shirui/set-big-chinese-font)
+
+
+
 (provide 'init-local)
 ;;; init-local.el ends here
