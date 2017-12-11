@@ -39,8 +39,8 @@
                 :slant 'normal
                 :size 19.5))))
 
-(global-set-key (kbd "C-c C-n") 'shirui/set-normal-chinese-font)
-(global-set-key (kbd "C-c C-S-n") 'shirui/set-big-chinese-font)
+(global-set-key (kbd "C-M-S-c") 'shirui/set-normal-chinese-font)
+(global-set-key (kbd "C-M-c") 'shirui/set-big-chinese-font)
 
 
 
